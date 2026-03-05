@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudio de arquitectura. Diseño minimalista y espacios que inspiran. Proyectos residenciales, comerciales y culturales.">
+  <title>Estudio Arquitectura | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo">ESTUDIO</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="projects.html">Proyectos</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__image">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1920&q=80" alt="Edificio de arquitectura moderna">
+      </div>
+      <div class="hero__content container">
+        <h1>Arquitectura con propósito</h1>
+        <p class="hero__tagline">Diseñamos espacios que transforman la forma en que vivimos</p>
+      </div>
+      <a href="#intro" class="hero__scroll">Descubre</a>
+    </section>
+
+    <section class="section intro" id="intro">
+      <div class="container">
+        <h2>Un estudio, una visión</h2>
+        <p>Somos un estudio de arquitectura con sede en la ciudad. Creemos en el diseño consciente: cada proyecto nace del diálogo entre lugar, luz y función. Trabajamos en escalas que van desde la vivienda unifamiliar hasta equipamientos culturales y comerciales, siempre con un lenguaje contemporáneo y atemporal.</p>
+      </div>
+    </section>
+
+    <section class="section featured">
+      <div class="container">
+        <div class="section-header">
+          <h2>Proyectos destacados</h2>
+          <p>Una selección de nuestros trabajos más recientes. Cada uno refleja nuestro compromiso con la calidad espacial y el detalle.</p>
+        </div>
+        <div class="featured-grid">
+          <a href="project-detail.html?id=1" class="project-card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Casa moderna con piscina">
+            <div class="project-card__overlay">
+              <h3>Casa sobre el valle</h3>
+              <span class="project-card__meta">Montevideo, Uruguay · 2023</span>
+            </div>
+          </a>
+          <a href="project-detail.html?id=2" class="project-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Vivienda unifamiliar contemporánea">
+            <div class="project-card__overlay">
+              <h3>Villa Norte</h3>
+              <span class="project-card__meta">Punta del Este, Uruguay · 2023</span>
+            </div>
+          </a>
+        </div>
+        <div class="text-center" style="margin-top: var(--space-2xl);">
+          <a href="projects.html" class="btn btn--light">Ver todos los proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta section--tight">
+      <div class="container">
+        <h2>¿Tienes un proyecto en mente?</h2>
+        <p>Nos encantaría conocer tu idea y explorar cómo podemos darle forma.</p>
+        <a href="contact.html" class="btn">Contactar</a>
+      </div>
+    </section>
+
+    <section class="section contact-teaser section--tight">
+      <div class="container">
+        <h3>Contacto</h3>
+        <p>Estudio Arquitectura · Av. 18 de Julio 1234 · 11200 Montevideo</p>
+        <p><a href="mailto:hola@estudioarquitectura.com">hola@estudioarquitectura.com</a> · +598 2900 1234</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html" class="logo">ESTUDIO</a>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="projects.html">Proyectos</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">© 2025 Estudio Arquitectura. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
