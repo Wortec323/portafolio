@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ARCADE NIGHT — Fiesta retro. Música, juegos y nostalgia 80s.">
+  <title>ARCADE NIGHT | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="retro-scanlines" aria-hidden="true"></div>
+  <div class="retro-shapes" aria-hidden="true"></div>
+
+  <header class="retro-header" id="header">
+    <div class="retro-header__inner">
+      <a href="index.html" class="retro-logo">ARCADE NIGHT</a>
+      <button class="retro-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="retro-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="games.html">Juegos</a>
+        <a href="about.html">El evento</a>
+        <a href="contact.html">Entradas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="retro-hero">
+      <div class="retro-container">
+        <h1 class="retro-hero__title retro-glitch">ARCADE NIGHT</h1>
+        <p class="retro-hero__tagline">Música, juegos clásicos y nostalgia 80s. Una noche para volver al futuro.</p>
+        <a href="contact.html" class="retro-btn">COMPRAR ENTRADAS</a>
+      </div>
+    </section>
+
+    <section class="retro-section">
+      <div class="retro-container">
+        <h2 class="retro-section__title retro-glitch-hover">¿QUÉ HAY?</h2>
+        <div class="retro-grid">
+          <div class="retro-card">
+            <span class="retro-card__icon">🕹</span>
+            <h3>Máquinas arcade</h3>
+            <p>Pac-Man, Space Invaders, Street Fighter y más. Monedas incluidas.</p>
+          </div>
+          <div class="retro-card">
+            <span class="retro-card__icon">🎵</span>
+            <h3>DJ set 80s</h3>
+            <p>Synthwave, new wave y los hits que definieron la década.</p>
+          </div>
+          <div class="retro-card">
+            <span class="retro-card__icon">🍕</span>
+            <h3>Bar & food</h3>
+            <p>Bebidas temáticas y comida para aguantar hasta el final.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="retro-section retro-section--dark">
+      <div class="retro-container">
+        <h2 class="retro-section__title">FECHA Y LUGAR</h2>
+        <p class="retro-info">Sábado 15 de junio · 22:00</p>
+        <p class="retro-info">Warehouse 88 — Zona portuaria</p>
+        <p class="retro-cta"><a href="contact.html" class="retro-btn retro-btn--outline">RESERVAR</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="retro-footer">
+    <div class="retro-footer__inner">
+      <span class="retro-logo">ARCADE NIGHT</span>
+      <p>entradas@arcadenight.com · +598 99 555 666</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

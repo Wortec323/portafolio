@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flow — Gestión de proyectos simple y visual. Colabora en un solo lugar.">
+  <title>Flow | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="glass-bg"></div>
+
+  <header class="glass-header" id="header">
+    <div class="glass-header__inner">
+      <a href="index.html" class="glass-logo">Flow</a>
+      <button class="glass-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="glass-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="features.html">Funciones</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="glass-hero">
+      <div class="glass-container">
+        <div class="glass-hero__float">
+          <h1 class="glass-hero__title">Gestiona proyectos sin ruido</h1>
+          <p class="glass-hero__lead">Tableros, tareas y equipo en un solo lugar. Diseño limpio, colaboración en tiempo real.</p>
+          <a href="#features" class="glass-btn glass-btn--primary">Ver cómo funciona</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-section" id="features">
+      <div class="glass-container">
+        <h2 class="glass-section__title">Todo lo que necesitas</h2>
+        <div class="glass-cards glass-stagger">
+          <div class="glass-card glass-stagger__item">
+            <span class="glass-card__icon">▣</span>
+            <h3>Tableros visuales</h3>
+            <p>Organiza tareas en columnas. Arrastra, suelta y prioriza en segundos.</p>
+          </div>
+          <div class="glass-card glass-stagger__item">
+            <span class="glass-card__icon">◉</span>
+            <h3>Tiempo real</h3>
+            <p>Tu equipo ve los cambios al instante. Sin emails ni versiones desactualizadas.</p>
+          </div>
+          <div class="glass-card glass-stagger__item">
+            <span class="glass-card__icon">◇</span>
+            <h3>Integraciones</h3>
+            <p>Conecta con Slack, Google Drive y las herramientas que ya usas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass-section glass-section--alt">
+      <div class="glass-container">
+        <h2 class="glass-section__title">Planes</h2>
+        <div class="glass-pricing glass-stagger">
+          <div class="glass-price-card glass-stagger__item">
+            <h3>Free</h3>
+            <p class="glass-price-card__price">0 €</p>
+            <p>Hasta 3 tableros y 5 miembros. Ideal para empezar.</p>
+            <a href="contact.html" class="glass-btn glass-btn--outline">Empezar</a>
+          </div>
+          <div class="glass-price-card glass-price-card--highlight glass-stagger__item">
+            <h3>Pro</h3>
+            <p class="glass-price-card__price">9 €<span>/mes</span></p>
+            <p>Tableros ilimitados, integraciones y soporte prioritario.</p>
+            <a href="contact.html" class="glass-btn glass-btn--primary">Probar Pro</a>
+          </div>
+          <div class="glass-price-card glass-stagger__item">
+            <h3>Team</h3>
+            <p class="glass-price-card__price">19 €<span>/mes</span></p>
+            <p>Para equipos grandes. Permisos, SSO y auditoría.</p>
+            <a href="contact.html" class="glass-btn glass-btn--outline">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-footer">
+    <div class="glass-footer__inner">
+      <span class="glass-logo">Flow</span>
+      <p><a href="mailto:hola@flow.app">hola@flow.app</a> · <a href="tel:+59899111222">+598 99 111 222</a></p>
+      <p class="glass-footer__copy">© 2025 Flow</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

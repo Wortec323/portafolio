@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Casa del Té — Ceremonia, calma y té de calidad. Montevideo.">
+  <title>Casa del Té | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="jpn-header" id="header">
+    <div class="jpn-header__inner">
+      <a href="index.html" class="jpn-logo">Casa del Té</a>
+      <button class="jpn-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="jpn-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="menu.html">Carta</a>
+        <a href="about.html">Filosofía</a>
+        <a href="contact.html">Reservas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="jpn-hero">
+      <div class="jpn-container">
+        <p class="jpn-hero__label jpn-reveal">茶 — Té</p>
+        <h1 class="jpn-hero__title jpn-reveal">Un momento de calma</h1>
+        <p class="jpn-hero__lead jpn-reveal">Té de origen, ceremonia y un espacio para desconectar. En el corazón de la ciudad.</p>
+        <a href="menu.html" class="jpn-link jpn-link-underline jpn-reveal">Ver carta</a>
+      </div>
+    </section>
+
+    <section class="jpn-section">
+      <div class="jpn-container">
+        <h2 class="jpn-section__title jpn-reveal">Qué ofrecemos</h2>
+        <div class="jpn-cards">
+          <a href="menu.html#verde" class="jpn-card jpn-reveal">
+            <span class="jpn-card__name">Té verde</span>
+            <span class="jpn-card__desc">Sencha, matcha, gyokuro. Origen y temporada.</span>
+          </a>
+          <a href="menu.html#negro" class="jpn-card jpn-reveal">
+            <span class="jpn-card__name">Té negro</span>
+            <span class="jpn-card__desc">Assam, Darjeeling, blends de la casa.</span>
+          </a>
+          <a href="menu.html#ceremonia" class="jpn-card jpn-reveal">
+            <span class="jpn-card__name">Ceremonia</span>
+            <span class="jpn-card__desc">Experiencia guiada. Reserva con anticipación.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="jpn-section jpn-section--alt">
+      <div class="jpn-container jpn-container--narrow">
+        <p class="jpn-quote jpn-reveal">«El té es un arte que requiere ser humano para apreciarlo.»</p>
+        <p class="jpn-quote-attribution jpn-reveal">— Okakura Kakuzō</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="jpn-footer">
+    <div class="jpn-footer__inner">
+      <a href="index.html" class="jpn-logo">Casa del Té</a>
+      <p>Bvar. España 2100 · Montevideo</p>
+      <p><a href="mailto:hola@casadelte.com" class="jpn-link-underline">hola@casadelte.com</a> · <a href="tel:+59829001111" class="jpn-link-underline">+598 2900 1111</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

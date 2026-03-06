@@ -1,0 +1,475 @@
+/* ============================================
+   Casa del Té — Japonés / Wabi-sabi
+   ============================================ */
+
+:root {
+  --jpn-bg: #fafaf8;
+  --jpn-white: #fff;
+  --jpn-ink: #1a1a1a;
+  --jpn-accent: #c41e3a;
+  --jpn-muted: #5c5c5c;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Noto Sans", -apple-system, sans-serif;
+  --space: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 5rem;
+  --max-w: 900px;
+  --transition: 0.4s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--jpn-ink);
+  background: var(--jpn-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--jpn-accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----- Animated underline on links ----- */
+.jpn-link-underline {
+  position: relative;
+}
+
+.jpn-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--jpn-accent);
+  transition: width var(--transition);
+}
+
+.jpn-link-underline:hover::after {
+  width: 100%;
+}
+
+/* ----- Reveal on scroll (subtle) ----- */
+.jpn-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.jpn-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----- Header ----- */
+.jpn-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250, 250, 248, 0.97);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.jpn-header.scrolled {
+  border-bottom-color: rgba(26, 26, 26, 0.1);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.03);
+}
+
+.jpn-header__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jpn-logo {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--jpn-ink);
+}
+
+.jpn-nav {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.jpn-nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--jpn-muted);
+  letter-spacing: 0.02em;
+}
+
+.jpn-nav a:hover {
+  color: var(--jpn-ink);
+}
+
+.jpn-burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space);
+}
+
+.jpn-burger span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--jpn-ink);
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .jpn-burger {
+    display: block;
+  }
+  .jpn-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--jpn-bg);
+    border-left: 1px solid rgba(26, 26, 26, 0.08);
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-xl);
+    gap: var(--space-lg);
+    transition: right 0.35s ease;
+    z-index: 99;
+  }
+  .jpn-nav.open {
+    right: 0;
+  }
+}
+
+/* ----- Hero ----- */
+.jpn-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: calc(80px + var(--space-2xl)) var(--space-xl) var(--space-2xl);
+}
+
+.jpn-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.jpn-hero__label {
+  font-size: 0.8125rem;
+  letter-spacing: 0.2em;
+  color: var(--jpn-muted);
+  margin-bottom: var(--space);
+}
+
+.jpn-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  color: var(--jpn-ink);
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.02em;
+}
+
+.jpn-hero__lead {
+  font-size: clamp(1.0625rem, 1.8vw, 1.25rem);
+  color: var(--jpn-muted);
+  max-width: 480px;
+  margin-bottom: var(--space-xl);
+}
+
+.jpn-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--jpn-ink);
+}
+
+/* ----- Sections ----- */
+.jpn-section {
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+.jpn-section--alt {
+  background: rgba(26, 26, 26, 0.02);
+}
+
+.jpn-section__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: var(--jpn-ink);
+  margin-bottom: var(--space-xl);
+}
+
+.jpn-container--narrow {
+  max-width: 580px;
+}
+
+/* ----- Cards ----- */
+.jpn-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  border-top: 1px solid rgba(26, 26, 26, 0.08);
+}
+
+.jpn-card {
+  display: block;
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+  transition: opacity var(--transition), padding-left var(--transition);
+}
+
+.jpn-card:hover {
+  opacity: 0.85;
+  padding-left: var(--space);
+}
+
+.jpn-card__name {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--jpn-ink);
+  margin-bottom: 0.25rem;
+}
+
+.jpn-card__desc {
+  font-size: 0.9375rem;
+  color: var(--jpn-muted);
+}
+
+/* ----- Quote ----- */
+.jpn-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-style: italic;
+  color: var(--jpn-ink);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.jpn-quote-attribution {
+  font-size: 0.875rem;
+  color: var(--jpn-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ----- Page hero ----- */
+.jpn-page-hero {
+  padding: calc(80px + var(--space-2xl)) var(--space-xl) var(--space-xl);
+}
+
+.jpn-page-hero__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--jpn-muted);
+  margin-bottom: 0.5rem;
+}
+
+.jpn-page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  color: var(--jpn-ink);
+  margin-bottom: var(--space);
+}
+
+.jpn-page-hero__lead {
+  font-size: 1.0625rem;
+  color: var(--jpn-muted);
+  max-width: 520px;
+}
+
+/* ----- About ----- */
+.jpn-about-text p {
+  margin-bottom: var(--space-lg);
+  font-size: 1.0625rem;
+  color: var(--jpn-ink);
+}
+
+.jpn-cta {
+  margin-top: var(--space-xl);
+}
+
+/* ----- Contact ----- */
+.jpn-contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .jpn-contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jpn-form label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--jpn-muted);
+  margin-bottom: 0.25rem;
+}
+
+.jpn-form input,
+.jpn-form textarea {
+  width: 100%;
+  padding: 0.75rem 0;
+  margin-bottom: var(--space-lg);
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+  color: var(--jpn-ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: border-color var(--transition);
+}
+
+.jpn-form input:focus,
+.jpn-form textarea:focus {
+  outline: none;
+  border-bottom-color: var(--jpn-accent);
+}
+
+.jpn-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.jpn-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--jpn-white);
+  background: var(--jpn-ink);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.jpn-btn:hover {
+  background: var(--jpn-accent);
+}
+
+.jpn-contact-datos p {
+  margin-bottom: var(--space);
+  font-size: 0.9375rem;
+  color: var(--jpn-muted);
+}
+
+.jpn-contact-datos a {
+  color: var(--jpn-ink);
+}
+
+/* ----- Menu ----- */
+.jpn-menu-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--jpn-ink);
+  margin-bottom: var(--space-lg);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--jpn-accent);
+  display: inline-block;
+}
+
+.jpn-menu-list {
+  list-style: none;
+}
+
+.jpn-menu-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space) 0;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+}
+
+.jpn-menu-item__name {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  color: var(--jpn-ink);
+}
+
+.jpn-menu-item__origin {
+  font-size: 0.8125rem;
+  color: var(--jpn-muted);
+  letter-spacing: 0.05em;
+}
+
+.jpn-menu-desc {
+  font-size: 0.9375rem;
+  color: var(--jpn-muted);
+  margin-top: var(--space);
+}
+
+/* ----- Footer ----- */
+.jpn-footer {
+  border-top: 1px solid rgba(26, 26, 26, 0.08);
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.jpn-footer__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.jpn-footer .jpn-logo {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.jpn-footer p {
+  font-size: 0.875rem;
+  color: var(--jpn-muted);
+}
+
+.jpn-footer a {
+  color: var(--jpn-ink);
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carta — Casa del Té. Tés e infusiones.">
+  <title>Carta | Casa del Té</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="jpn-header" id="header">
+    <div class="jpn-header__inner">
+      <a href="index.html" class="jpn-logo">Casa del Té</a>
+      <button class="jpn-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="jpn-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="menu.html">Carta</a>
+        <a href="about.html">Filosofía</a>
+        <a href="contact.html">Reservas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="jpn-page-hero">
+      <div class="jpn-container">
+        <p class="jpn-page-hero__label jpn-reveal">Carta</p>
+        <h1 class="jpn-page-hero__title jpn-reveal">Tés e infusiones</h1>
+        <p class="jpn-page-hero__lead jpn-reveal">Selección de origen. Consultá temperatura y tiempo de infusión con nosotros.</p>
+      </div>
+    </section>
+
+    <section class="jpn-section" id="verde">
+      <div class="jpn-container jpn-container--narrow">
+        <h2 class="jpn-menu-title jpn-reveal">Té verde</h2>
+        <ul class="jpn-menu-list">
+          <li class="jpn-reveal"><span class="jpn-menu-item__name">Sencha</span><span class="jpn-menu-item__origin">Japón</span></li>
+          <li class="jpn-reveal"><span class="jpn-menu-item__name">Matcha</span><span class="jpn-menu-item__origin">Ceremonia</span></li>
+          <li class="jpn-reveal"><span class="jpn-menu-item__name">Gyokuro</span><span class="jpn-menu-item__origin">Japón</span></li>
+          <li class="jpn-reveal"><span class="jpn-menu-item__name">Long Jing</span><span class="jpn-menu-item__origin">China</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="jpn-section jpn-section--alt" id="negro">
+      <div class="jpn-container jpn-container--narrow">
+        <h2 class="jpn-menu-title jpn-reveal">Té negro</h2>
+        <ul class="jpn-menu-list">
+          <li class="jpn-reveal"><span class="jpn-menu-item__name">Assam</span><span class="jpn-menu-item__origin">India</span></li>
+          <li class="jpn-reveal"><span class="jpn-menu-item__name">Darjeeling</span><span class="jpn-menu-item__origin">India</span></li>
+          <li class="jpn-reveal"><span class="jpn-menu-item__name">Earl Grey casa</span><span class="jpn-menu-item__origin">Blend</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="jpn-section" id="ceremonia">
+      <div class="jpn-container jpn-container--narrow">
+        <h2 class="jpn-menu-title jpn-reveal">Ceremonia</h2>
+        <p class="jpn-menu-desc jpn-reveal">Experiencia guiada de ceremonia japonesa del té (matcha). Duración aproximada 45 min. Reserva previa.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="jpn-footer">
+    <div class="jpn-footer__inner">
+      <a href="index.html" class="jpn-logo">Casa del Té</a>
+      <p>Bvar. España 2100 · Montevideo</p>
+      <p><a href="mailto:hola@casadelte.com" class="jpn-link-underline">hola@casadelte.com</a> · <a href="tel:+59829001111" class="jpn-link-underline">+598 2900 1111</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

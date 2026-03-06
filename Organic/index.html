@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verde Vivo — Cosmética natural. Ingredientes de la tierra, cuidado consciente.">
+  <title>Verde Vivo | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="organic-blobs" aria-hidden="true">
+    <div class="organic-blob organic-blob--1"></div>
+    <div class="organic-blob organic-blob--2"></div>
+    <div class="organic-blob organic-blob--3"></div>
+  </div>
+
+  <header class="organic-header" id="header">
+    <div class="organic-header__inner">
+      <a href="index.html" class="organic-logo">Verde Vivo</a>
+      <button class="organic-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="organic-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="products.html">Productos</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="organic-hero">
+      <div class="organic-hero__parallax"></div>
+      <div class="organic-container">
+        <h1 class="organic-hero__title organic-reveal">De la tierra a tu piel</h1>
+        <p class="organic-hero__lead organic-reveal">Cosmética natural con ingredientes que respetan el cuerpo y el planeta. Sin sulfatos, sin parabenos, con aromas que conectan.</p>
+        <a href="#valores" class="organic-btn organic-reveal">Nuestros valores</a>
+      </div>
+    </section>
+
+    <section class="organic-section" id="valores">
+      <div class="organic-container">
+        <h2 class="organic-section__title organic-reveal">Por qué Verde Vivo</h2>
+        <div class="organic-cards">
+          <div class="organic-card organic-reveal">
+            <span class="organic-card__icon">🌿</span>
+            <h3>Ingredientes naturales</h3>
+            <p>Plantas, aceites y extractos de origen local cuando es posible. Trazabilidad y calidad.</p>
+          </div>
+          <div class="organic-card organic-reveal">
+            <span class="organic-card__icon">♻</span>
+            <h3>Envases sostenibles</h3>
+            <p>Vidrio, papel reciclado y packaging mínimo. Menos plástico, más conciencia.</p>
+          </div>
+          <div class="organic-card organic-reveal">
+            <span class="organic-card__icon">✋</span>
+            <h3>Hecho a mano</h3>
+            <p>Pequeñas series, elaboración artesanal y control de cada lote.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="organic-section organic-section--parallax">
+      <div class="organic-section__bg"></div>
+      <div class="organic-container">
+        <h2 class="organic-section__title organic-section__title--light organic-reveal">Productos destacados</h2>
+        <div class="organic-preview">
+          <a href="product-detail.html?id=1" class="organic-preview-card organic-reveal">
+            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=80" alt="Aceite facial">
+            <span class="organic-preview-card__label">Aceite facial — Caléndula</span>
+          </a>
+          <a href="product-detail.html?id=2" class="organic-preview-card organic-reveal">
+            <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&q=80" alt="Jabón">
+            <span class="organic-preview-card__label">Jabón de lavanda</span>
+          </a>
+          <a href="product-detail.html?id=3" class="organic-preview-card organic-reveal">
+            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80" alt="Crema">
+            <span class="organic-preview-card__label">Crema corporal — Romero</span>
+          </a>
+        </div>
+        <p class="organic-cta-wrap"><a href="products.html" class="organic-btn organic-btn--outline">Ver catálogo</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="organic-footer">
+    <div class="organic-footer__inner">
+      <span class="organic-logo">Verde Vivo</span>
+      <p><a href="mailto:hola@verdevivo.com">hola@verdevivo.com</a> · <a href="tel:+59899887766">+598 99 887 766</a></p>
+      <p class="organic-footer__copy">© 2025 Verde Vivo</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

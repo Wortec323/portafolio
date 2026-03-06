@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juegos — ARCADE NIGHT. Máquinas disponibles.">
+  <title>Juegos | ARCADE NIGHT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="retro-scanlines" aria-hidden="true"></div>
+  <div class="retro-shapes" aria-hidden="true"></div>
+
+  <header class="retro-header" id="header">
+    <div class="retro-header__inner">
+      <a href="index.html" class="retro-logo">ARCADE NIGHT</a>
+      <button class="retro-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="retro-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="games.html">Juegos</a>
+        <a href="about.html">El evento</a>
+        <a href="contact.html">Entradas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="retro-page-hero">
+      <div class="retro-container">
+        <h1 class="retro-page-hero__title retro-glitch-hover">JUEGOS</h1>
+        <p class="retro-page-hero__lead">Máquinas arcade que estarán en el evento. Monedas incluidas con la entrada.</p>
+      </div>
+    </section>
+
+    <section class="retro-section">
+      <div class="retro-container">
+        <div class="retro-games-grid">
+          <div class="retro-game-card">
+            <div class="retro-game-card__img"><img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&q=80" alt="Arcade"></div>
+            <h3>Pac-Man</h3>
+            <p>1980 · Namco</p>
+          </div>
+          <div class="retro-game-card">
+            <div class="retro-game-card__img"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&q=80" alt="Arcade"></div>
+            <h3>Space Invaders</h3>
+            <p>1978 · Taito</p>
+          </div>
+          <div class="retro-game-card">
+            <div class="retro-game-card__img"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&q=80" alt="Arcade"></div>
+            <h3>Street Fighter II</h3>
+            <p>1991 · Capcom</p>
+          </div>
+          <div class="retro-game-card">
+            <div class="retro-game-card__img"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&q=80" alt="Arcade"></div>
+            <h3>Donkey Kong</h3>
+            <p>1981 · Nintendo</p>
+          </div>
+        </div>
+        <p class="retro-cta"><a href="contact.html" class="retro-btn">COMPRAR ENTRADAS</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="retro-footer">
+    <div class="retro-footer__inner">
+      <span class="retro-logo">ARCADE NIGHT</span>
+      <p>entradas@arcadenight.com · +598 99 555 666</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

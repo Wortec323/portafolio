@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detalle de proyecto — NEXUS Studio">
+  <title>Proyecto | NEXUS Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="neon-grid-bg" aria-hidden="true"></div>
+
+  <header class="neon-header" id="header">
+    <div class="neon-header__inner">
+      <a href="index.html" class="neon-logo">NEXUS</a>
+      <button class="neon-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="neon-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="projects.html">Proyectos</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="neon-detail">
+    <section class="neon-detail-hero">
+      <div class="neon-detail-hero__img">
+        <img id="projectHeroImage" src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1920&q=80" alt="">
+      </div>
+      <div class="neon-container neon-detail-hero__content">
+        <a href="projects.html" class="neon-back">← Volver a proyectos</a>
+        <h1 id="projectTitle">Proyecto</h1>
+        <p class="neon-detail-meta" id="projectMeta">—</p>
+      </div>
+    </section>
+
+    <section class="neon-section">
+      <div class="neon-container">
+        <div class="neon-detail-gallery" id="projectGallery"></div>
+        <div class="neon-detail-desc" id="projectDescription"></div>
+        <p class="neon-cta-wrap"><a href="projects.html" class="neon-btn neon-btn--outline">Ver proyectos</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="neon-footer">
+    <div class="neon-footer__inner">
+      <p class="neon-footer__name">NEXUS Studio</p>
+      <p><a href="mailto:hola@nexus.studio">hola@nexus.studio</a> · <a href="tel:+59899123456">+598 99 123 456</a></p>
+      <p class="neon-footer__copy">© 2025 NEXUS</p>
+    </div>
+  </footer>
+
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function() {
+      if (!window.PROJECTS_DATA) return;
+      var params = new URLSearchParams(window.location.search);
+      var id = parseInt(params.get('id'), 10) || 1;
+      var project = window.PROJECTS_DATA[id];
+      if (!project) project = window.PROJECTS_DATA[1];
+      var heroImg = document.getElementById('projectHeroImage');
+      var title = document.getElementById('projectTitle');
+      var meta = document.getElementById('projectMeta');
+      var gallery = document.getElementById('projectGallery');
+      var description = document.getElementById('projectDescription');
+      if (heroImg) { heroImg.src = project.heroImage; heroImg.alt = project.name; }
+      if (title) title.textContent = project.name;
+      if (meta) meta.textContent = project.client + ' · ' + project.year;
+      if (gallery && project.gallery && project.gallery.length) {
+        gallery.innerHTML = project.gallery.map(function(url) {
+          return '<img src="' + url + '" alt="' + project.name + '">';
+        }).join('');
+      }
+      if (description) {
+        description.innerHTML = '<h2>El proyecto</h2><p>' + project.description + '</p>' +
+          (project.description2 ? '<p>' + project.description2 + '</p>' : '');
+      }
+      document.title = project.name + ' | NEXUS Studio';
+    })();
+  </script>
+</body>
+</html>

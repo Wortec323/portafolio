@@ -1,0 +1,521 @@
+/* ============================================
+   ARCADE NIGHT — Retro 80s
+   ============================================ */
+
+:root {
+  --retro-magenta: #ff006e;
+  --retro-cyan: #00f5d4;
+  --retro-dark: #0d0221;
+  --retro-bg: #1a0a2e;
+  --retro-text: #e0e0e0;
+  --font-pixel: "Press Start 2P", cursive;
+  --font-body: "Outfit", sans-serif;
+  --space: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 4rem;
+  --max-w: 1000px;
+  --transition: 0.2s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--retro-text);
+  background: var(--retro-bg);
+  background-image: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #0d0221 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----- Scanlines overlay (VHS style) ----- */
+.retro-scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  animation: retroScan 8s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes retroScan {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100px; }
+}
+
+/* ----- Animated shapes in background ----- */
+.retro-shapes {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.retro-shapes::before,
+.retro-shapes::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: retroShapeRotate 20s linear infinite;
+}
+
+.retro-shapes::before {
+  background: var(--retro-magenta);
+  top: -100px;
+  right: -100px;
+}
+
+.retro-shapes::after {
+  background: var(--retro-cyan);
+  bottom: -150px;
+  left: -150px;
+  animation-duration: 25s;
+  animation-direction: reverse;
+}
+
+@keyframes retroShapeRotate {
+  from { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  to { transform: rotate(360deg) scale(1); }
+}
+
+/* ----- Glitch effect (always on hero title) ----- */
+.retro-glitch {
+  position: relative;
+  animation: retroGlitchText 3s ease-in-out infinite;
+}
+
+@keyframes retroGlitchText {
+  0%, 90%, 100% { transform: translate(0); text-shadow: 0 0 20px var(--retro-cyan); }
+  92% { transform: translate(-3px, 2px); text-shadow: 3px 0 var(--retro-magenta), -2px 0 var(--retro-cyan); }
+  94% { transform: translate(2px, -2px); text-shadow: -2px 0 var(--retro-cyan), 2px 0 var(--retro-magenta); }
+  96% { transform: translate(-2px, 1px); text-shadow: 2px 0 var(--retro-magenta); }
+  98% { transform: translate(0); }
+}
+
+/* ----- Glitch on hover ----- */
+.retro-glitch-hover:hover {
+  animation: retroGlitchHover 0.4s ease;
+}
+
+@keyframes retroGlitchHover {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); color: var(--retro-magenta); }
+  40% { transform: translate(2px, -2px); color: var(--retro-cyan); }
+  60% { transform: translate(-2px, -2px); color: var(--retro-magenta); }
+  80% { transform: translate(2px, 2px); color: var(--retro-cyan); }
+  100% { transform: translate(0); color: inherit; }
+}
+
+/* ----- Header ----- */
+.retro-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(13, 2, 33, 0.9);
+  border-bottom: 3px solid var(--retro-magenta);
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.3);
+  transition: box-shadow 0.3s;
+}
+
+.retro-header.scrolled {
+  box-shadow: 0 0 30px rgba(0, 245, 212, 0.2);
+  border-bottom-color: var(--retro-cyan);
+}
+
+.retro-header__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--space) var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.retro-logo {
+  font-family: var(--font-pixel);
+  font-size: clamp(0.5rem, 2vw, 0.75rem);
+  color: var(--retro-cyan);
+  text-shadow: 0 0 10px var(--retro-cyan);
+}
+
+.retro-nav {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.retro-nav a {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: var(--retro-text);
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.retro-nav a:hover {
+  color: var(--retro-magenta);
+  text-shadow: 0 0 8px var(--retro-magenta);
+}
+
+.retro-burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space);
+}
+
+.retro-burger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--retro-cyan);
+  margin: 5px 0;
+  box-shadow: 0 0 8px var(--retro-cyan);
+}
+
+@media (max-width: 768px) {
+  .retro-burger {
+    display: block;
+  }
+  .retro-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 280px;
+    height: 100vh;
+    background: var(--retro-dark);
+    border-left: 3px solid var(--retro-magenta);
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-xl);
+    gap: var(--space-lg);
+    transition: right 0.3s ease;
+    z-index: 99;
+    box-shadow: -10px 0 30px rgba(255, 0, 110, 0.2);
+  }
+  .retro-nav.open {
+    right: 0;
+  }
+}
+
+/* ----- Hero ----- */
+.retro-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(80px + var(--space-2xl)) var(--space-xl);
+}
+
+.retro-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.retro-hero__title {
+  font-family: var(--font-pixel);
+  font-size: clamp(1.25rem, 5vw, 2.5rem);
+  color: var(--retro-cyan);
+  text-shadow: 0 0 20px var(--retro-cyan), 0 0 40px rgba(0, 245, 212, 0.5);
+  margin-bottom: var(--space-lg);
+  line-height: 1.8;
+}
+
+.retro-hero__tagline {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--retro-text);
+  max-width: 480px;
+  margin: 0 auto var(--space-xl);
+}
+
+.retro-btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--retro-dark);
+  background: linear-gradient(135deg, var(--retro-magenta), var(--retro-cyan));
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+}
+
+.retro-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px var(--retro-cyan), 0 0 50px rgba(0, 245, 212, 0.4);
+}
+
+.retro-btn--outline {
+  background: transparent;
+  color: var(--retro-cyan);
+  border: 3px solid var(--retro-cyan);
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.3);
+}
+
+.retro-btn--outline:hover {
+  background: rgba(0, 245, 212, 0.2);
+  box-shadow: 0 0 25px var(--retro-cyan);
+}
+
+/* ----- Sections ----- */
+.retro-section {
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+.retro-section--dark {
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid var(--retro-magenta);
+  text-align: center;
+}
+
+.retro-section__title {
+  font-family: var(--font-pixel);
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  color: var(--retro-magenta);
+  text-shadow: 0 0 15px var(--retro-magenta);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.retro-info {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.retro-cta {
+  margin-top: var(--space-xl);
+}
+
+/* ----- Grid / Cards ----- */
+.retro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.retro-card {
+  padding: var(--space-xl);
+  background: rgba(255, 0, 110, 0.08);
+  border: 2px solid var(--retro-magenta);
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.retro-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 0, 110, 0.4), inset 0 0 20px rgba(255, 0, 110, 0.05);
+}
+
+.retro-card__icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: var(--space);
+}
+
+.retro-card h3 {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--retro-cyan);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+}
+
+.retro-card p {
+  font-size: 0.9375rem;
+  color: var(--retro-text);
+}
+
+/* ----- Page hero ----- */
+.retro-page-hero {
+  padding: calc(80px + var(--space-2xl)) var(--space-xl) var(--space-xl);
+}
+
+.retro-page-hero__title {
+  font-family: var(--font-pixel);
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  color: var(--retro-cyan);
+  text-shadow: 0 0 15px var(--retro-cyan);
+  margin-bottom: var(--space);
+}
+
+.retro-page-hero__lead {
+  font-size: 1.125rem;
+  color: var(--retro-text);
+  max-width: 560px;
+}
+
+.retro-container--narrow {
+  max-width: 640px;
+}
+
+/* ----- About ----- */
+.retro-about-text p {
+  margin-bottom: var(--space-lg);
+  color: var(--retro-text);
+}
+
+/* ----- Contact ----- */
+.retro-contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .retro-contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.retro-form label {
+  display: block;
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: var(--retro-cyan);
+  margin-bottom: 0.25rem;
+}
+
+.retro-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: var(--space);
+  background: var(--retro-dark);
+  border: 2px solid var(--retro-magenta);
+  color: var(--retro-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.retro-form input:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(255, 0, 110, 0.4);
+}
+
+.retro-form button {
+  margin-top: var(--space);
+}
+
+.retro-contact-datos p {
+  margin-bottom: var(--space);
+  color: var(--retro-text);
+}
+
+.retro-contact-datos a {
+  color: var(--retro-cyan);
+}
+
+/* ----- Games grid ----- */
+.retro-games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.retro-game-card {
+  border: 2px solid var(--retro-cyan);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.retro-game-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.3);
+}
+
+.retro-game-card__img {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.retro-game-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.retro-game-card h3 {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: var(--retro-cyan);
+  padding: var(--space);
+  margin: 0;
+}
+
+.retro-game-card p {
+  font-size: 0.8125rem;
+  padding: 0 var(--space) var(--space);
+  color: var(--retro-text);
+  margin: 0;
+}
+
+/* ----- Footer ----- */
+.retro-footer {
+  border-top: 2px solid var(--retro-magenta);
+  padding: var(--space-xl);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.retro-footer__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.retro-footer .retro-logo {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.retro-footer p {
+  font-size: 0.875rem;
+  color: var(--retro-text);
+}
+
+.retro-footer a {
+  color: var(--retro-cyan);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto — NEXUS Studio. Hablemos de tu proyecto.">
+  <title>Contacto | NEXUS Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="neon-grid-bg" aria-hidden="true"></div>
+
+  <header class="neon-header" id="header">
+    <div class="neon-header__inner">
+      <a href="index.html" class="neon-logo">NEXUS</a>
+      <button class="neon-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="neon-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="projects.html">Proyectos</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="neon-page-hero">
+      <div class="neon-container">
+        <h1 class="neon-page-hero__title">Contacto</h1>
+        <p class="neon-page-hero__lead">Contanos tu idea. Respondemos en menos de 24 horas.</p>
+      </div>
+    </section>
+
+    <section class="neon-section">
+      <div class="neon-container">
+        <div class="neon-contact-wrap">
+          <form class="neon-form" id="contactForm" action="#" method="post">
+            <label for="name">Nombre / Empresa</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required placeholder="Tu proyecto, idea o consulta..."></textarea>
+            <button type="submit" class="neon-btn neon-btn--glow">Enviar</button>
+          </form>
+          <div class="neon-contact-datos">
+            <p><a href="mailto:hola@nexus.studio">hola@nexus.studio</a></p>
+            <p><a href="tel:+59899123456">+598 99 123 456</a></p>
+            <p>Montevideo, Uruguay</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="neon-footer">
+    <div class="neon-footer__inner">
+      <p class="neon-footer__name">NEXUS Studio</p>
+      <p><a href="mailto:hola@nexus.studio">hola@nexus.studio</a> · <a href="tel:+59899123456">+598 99 123 456</a></p>
+      <p class="neon-footer__copy">© 2025 NEXUS</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

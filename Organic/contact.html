@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto — Verde Vivo.">
+  <title>Contacto | Verde Vivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="organic-blobs" aria-hidden="true">
+    <div class="organic-blob organic-blob--1"></div>
+    <div class="organic-blob organic-blob--2"></div>
+    <div class="organic-blob organic-blob--3"></div>
+  </div>
+
+  <header class="organic-header" id="header">
+    <div class="organic-header__inner">
+      <a href="index.html" class="organic-logo">Verde Vivo</a>
+      <button class="organic-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="organic-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="products.html">Productos</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="organic-page-hero">
+      <div class="organic-container">
+        <h1 class="organic-page-hero__title organic-reveal">Contacto</h1>
+        <p class="organic-page-hero__lead organic-reveal">Consultas, pedidos o mayoristas. Te respondemos en menos de 24 horas.</p>
+      </div>
+    </section>
+
+    <section class="organic-section">
+      <div class="organic-container">
+        <div class="organic-contact-wrap">
+          <form class="organic-form" id="contactForm" action="#" method="post">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" required placeholder="Tu consulta o pedido..."></textarea>
+            <button type="submit" class="organic-btn">Enviar</button>
+          </form>
+          <div class="organic-contact-datos">
+            <p><a href="mailto:hola@verdevivo.com">hola@verdevivo.com</a></p>
+            <p><a href="tel:+59899887766">+598 99 887 766</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="organic-footer">
+    <div class="organic-footer__inner">
+      <span class="organic-logo">Verde Vivo</span>
+      <p><a href="mailto:hola@verdevivo.com">hola@verdevivo.com</a> · <a href="tel:+59899887766">+598 99 887 766</a></p>
+      <p class="organic-footer__copy">© 2025 Verde Vivo</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

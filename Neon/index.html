@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>(function(){var p=location.pathname;var d=p.endsWith('/')?p:(p.split('/').length>2?p.replace(/\/[^\/]*$/,'/') : p+'/');document.write('<base href="'+location.origin+d+'">');})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudio creativo. Branding, digital y experiencias que brillan.">
+  <title>NEXUS Studio | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="neon-grid-bg" aria-hidden="true"></div>
+
+  <header class="neon-header" id="header">
+    <div class="neon-header__inner">
+      <a href="index.html" class="neon-logo">NEXUS</a>
+      <button class="neon-burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="neon-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="projects.html">Proyectos</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="neon-hero">
+      <h1 class="neon-hero__title glitch" data-text="CREAMOS">CREAMOS</h1>
+      <p class="neon-hero__tagline">Branding, digital y experiencias que brillan en la oscuridad.</p>
+      <a href="#servicios" class="neon-btn neon-btn--glow">Ver qué hacemos</a>
+    </section>
+
+    <section class="neon-section" id="servicios">
+      <div class="neon-container">
+        <h2 class="neon-section__title">Servicios</h2>
+        <div class="neon-cards">
+          <a href="projects.html" class="neon-card neon-card--glow">
+            <span class="neon-card__icon">◆</span>
+            <h3>Branding</h3>
+            <p>Identidad, naming y sistemas visuales con personalidad.</p>
+          </a>
+          <a href="projects.html" class="neon-card neon-card--glow">
+            <span class="neon-card__icon">◇</span>
+            <h3>Digital</h3>
+            <p>Sitios, apps y experiencias interactivas.</p>
+          </a>
+          <a href="projects.html" class="neon-card neon-card--glow">
+            <span class="neon-card__icon">○</span>
+            <h3>Motion</h3>
+            <p>Animación, video y contenido que atrapa.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="neon-section neon-section--dark">
+      <div class="neon-container">
+        <h2 class="neon-section__title">Proyectos recientes</h2>
+        <div class="neon-projects-preview">
+          <a href="project-detail.html?id=1" class="neon-preview-card neon-card--glow">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80" alt="Proyecto">
+            <span class="neon-preview-card__label">ARC — Rediseño</span>
+          </a>
+          <a href="project-detail.html?id=2" class="neon-preview-card neon-card--glow">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d31fe5b7?w=600&q=80" alt="Proyecto">
+            <span class="neon-preview-card__label">Pulse — App</span>
+          </a>
+          <a href="project-detail.html?id=3" class="neon-preview-card neon-card--glow">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80" alt="Proyecto">
+            <span class="neon-preview-card__label">Void — Experiencia</span>
+          </a>
+        </div>
+        <p class="neon-cta-wrap"><a href="projects.html" class="neon-btn neon-btn--outline">Todos los proyectos</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="neon-footer">
+    <div class="neon-footer__inner">
+      <p class="neon-footer__name">NEXUS Studio</p>
+      <p><a href="mailto:hola@nexus.studio">hola@nexus.studio</a> · <a href="tel:+59899123456">+598 99 123 456</a></p>
+      <p class="neon-footer__copy">© 2025 NEXUS</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
