@@ -3,11 +3,12 @@
 
   var translations = {
     es: {
-      'hero.title': 'Conceptos de diseño web',
-      'hero.subtitle': 'Plantillas web adaptables para distintos tipos de negocio',
-      'hero.intro': 'Cada diseño es un punto de partida: colores, textos, imágenes y estructura se pueden personalizar según tu marca y objetivos. Elegí un estilo que te guste y lo adaptamos a tu empresa.',
-      'hero.cta': 'Ver conceptos de diseño',
-      'intro.text': 'A continuación hay varios estilos de diseño que pueden usarse como punto de partida para una web profesional. Cualquier diseño puede adaptarse a la identidad, el contenido y la estructura de tu empresa.',
+      'hero.title': 'Diseñamos webs modernas para tu negocio',
+      'hero.subtitle': 'Sitios web profesionales y adaptables para empresas que buscan una presencia online de calidad',
+      'hero.intro': 'Cada concepto es un punto de partida: colores, textos, imágenes y estructura se personalizan según tu marca. Elegí un estilo y lo adaptamos a tu empresa.',
+      'hero.ctaPrimary': 'Solicitar sitio web',
+      'hero.cta': 'Ver conceptos',
+      'intro.text': 'A continuación mostramos varios estilos de diseño que usamos como punto de partida. Cualquier concepto se adapta a la identidad, el contenido y la estructura de tu empresa.',
       'concepts.title': 'Conceptos de diseño',
       'card1.title': 'Concepto 1 — Oscuro y profesional',
       'card1.desc': 'Tema oscuro con acentos azules, ideal para tecnología y servicios B2B.',
@@ -36,17 +37,30 @@
       'process.step2.title': 'Enviá el contenido de tu empresa',
       'process.step2.desc': 'Compartí textos, imágenes, logo y las páginas que necesites.',
       'process.step3.title': 'Personalización y desarrollo',
-      'process.step3.desc': 'Adapto el diseño a tu identidad y desarrollo el sitio.',
+      'process.step3.desc': 'Adaptamos el diseño a tu identidad y desarrollamos el sitio.',
       'process.step4.title': 'Lanzamiento de la web',
       'process.step4.desc': 'Tu sitio se publica con alojamiento y configuración básica incluidos.',
-      'footer.dev': 'Desarrollado por Richard Marino',
+      'process.timeline': 'Plazo estimado: 1–2 semanas según el alcance del proyecto.',
+      'trust.title': 'Por qué elegir este estudio',
+      'trust.benefit1': 'Diseño profesional',
+      'trust.benefit1.desc': 'Interfaces modernas y coherentes con tu marca.',
+      'trust.benefit2': 'Sitios rápidos y optimizados',
+      'trust.benefit2.desc': 'Rendimiento y buenas prácticas para SEO.',
+      'trust.benefit3': 'Adaptado a móviles',
+      'trust.benefit3.desc': 'Diseño responsive en todos los dispositivos.',
+      'trust.benefit4': 'Entrega rápida',
+      'trust.benefit4.desc': 'Plazos claros y comunicación fluida.',
+      'footer.tagline': 'Estudio de diseño web moderno',
+      'footer.portfolio': 'Portafolio',
+      'footer.email': 'marinorichard@hotmail.com',
       'header.linkedin': 'LinkedIn'
     },
     en: {
-      'hero.title': 'Website Design Concepts',
-      'hero.subtitle': 'Adaptable website templates for different types of businesses',
-      'hero.intro': 'Each design is a starting point: colors, text, images, and structure can be customized to match your brand and goals. Pick a style you like and we adapt it to your company.',
-      'hero.cta': 'View design concepts',
+      'hero.title': 'We design modern websites for your business',
+      'hero.subtitle': 'Professional, adaptable websites for businesses that want a strong online presence',
+      'hero.intro': 'Each concept is a starting point: colors, text, images, and structure are tailored to your brand. Choose a style and we adapt it to your company.',
+      'hero.ctaPrimary': 'Request a website',
+      'hero.cta': 'View concepts',
       'intro.text': 'Below are several design styles that can be used as a starting point for a professional website. Any design can be adapted to your company\'s branding, content, and structure.',
       'concepts.title': 'Design concepts',
       'card1.title': 'Concept 1 — Dark & Professional',
@@ -76,10 +90,22 @@
       'process.step2.title': 'Provide your company content',
       'process.step2.desc': 'Share your text, images, logo, and any pages you need.',
       'process.step3.title': 'Customization and development',
-      'process.step3.desc': 'I adapt the design to your branding and build the site.',
+      'process.step3.desc': 'We adapt the design to your branding and build the site.',
       'process.step4.title': 'Website launch',
       'process.step4.desc': 'Your site goes live with hosting and basic setup included.',
-      'footer.dev': 'Developed by Richard Marino',
+      'process.timeline': 'Estimated timeline: 1–2 weeks depending on project scope.',
+      'trust.title': 'Why choose this studio',
+      'trust.benefit1': 'Professional design',
+      'trust.benefit1.desc': 'Modern interfaces that align with your brand.',
+      'trust.benefit2': 'Fast, optimized sites',
+      'trust.benefit2.desc': 'Performance and SEO best practices.',
+      'trust.benefit3': 'Mobile-friendly',
+      'trust.benefit3.desc': 'Responsive design across all devices.',
+      'trust.benefit4': 'Quick delivery',
+      'trust.benefit4.desc': 'Clear deadlines and smooth communication.',
+      'footer.tagline': 'Modern web design studio',
+      'footer.portfolio': 'Portfolio',
+      'footer.email': 'marinorichard@hotmail.com',
       'header.linkedin': 'LinkedIn'
     }
   };
@@ -111,7 +137,7 @@
     }
   };
 
-  var titles = { es: 'Conceptos de diseño web | Richard Marino — Desarrollador web freelance', en: 'Website Design Concepts | Richard Marino — Freelance Web Developer' };
+  var titles = { es: 'Conceptos de diseño web | Richard Marino — Estudio de diseño web', en: 'Website Design Concepts | Richard Marino — Web Design Studio' };
   var currentLang = 'es';
 
   function applyLang(lang) {
@@ -124,6 +150,9 @@
       var key = el.getAttribute('data-i18n');
       if (translations[lang][key] !== undefined) {
         el.textContent = translations[lang][key];
+        if (key === 'footer.email' && el.href) {
+          el.href = 'mailto:' + translations[lang][key];
+        }
       }
     });
 
