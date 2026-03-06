@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detalle de producto de Papel Central.">
+  <title>Producto | Papel Central</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="barra" id="header">
+    <div class="barra__caja">
+      <a href="index.html" class="barra__logo">Papel Central</a>
+      <button class="barra__abre" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="barra__links" id="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="products.html">Catálogo</a></li>
+        <li><a href="about.html">La tienda</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="ficha" id="fichaProducto">
+    <div class="ficha__imagen">
+      <img id="projectHeroImage" src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80" alt="">
+    </div>
+    <div class="ficha__cuerpo">
+      <a href="products.html" class="ficha__atras">← Catálogo</a>
+      <p class="ficha__categoria" id="projectMeta">—</p>
+      <h1 class="ficha__titulo" id="projectTitle">Carga…</h1>
+      <div class="ficha__descripcion" id="projectDescription"></div>
+      <div class="ficha__galeria" id="projectGallery"></div>
+      <p class="ficha__link"><a href="contact.html">Consultar por este producto</a></p>
+    </div>
+  </article>
+
+  <footer class="pie">
+    <p class="pie__linea">Colonia 876 · 11100 Montevideo · <a href="mailto:info@papeleriacentral.com">info@papeleriacentral.com</a> · <a href="tel:+59829015678">+598 2901 5678</a></p>
+    <p class="pie__copy">© 2025 Papel Central</p>
+  </footer>
+
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function() {
+      if (!window.PRODUCTS_DATA) return;
+      var params = new URLSearchParams(window.location.search);
+      var id = parseInt(params.get('id'), 10) || 1;
+      var product = window.PRODUCTS_DATA[id];
+      if (!product) product = window.PRODUCTS_DATA[1];
+      var heroImg = document.getElementById('projectHeroImage');
+      var title = document.getElementById('projectTitle');
+      var meta = document.getElementById('projectMeta');
+      var gallery = document.getElementById('projectGallery');
+      var description = document.getElementById('projectDescription');
+      if (heroImg) { heroImg.src = product.heroImage; heroImg.alt = product.name; }
+      if (title) title.textContent = product.name;
+      if (meta) meta.textContent = product.category || '—';
+      if (description) {
+        description.innerHTML = '<p>' + product.description + '</p>' +
+          (product.description2 ? '<p>' + product.description2 + '</p>' : '');
+      }
+      if (gallery && product.gallery && product.gallery.length) {
+        gallery.innerHTML = product.gallery.map(function(url) {
+          return '<img src="' + url + '" alt="' + product.name + '">';
+        }).join('');
+      }
+      document.title = product.name + ' | Papel Central';
+    })();
+  </script>
+</body>
+</html>

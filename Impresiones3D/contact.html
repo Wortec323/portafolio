@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicita presupuesto de impresión 3D. Envíanos tu proyecto o archivo.">
+  <title>Solicitar presupuesto | Impresiones 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar" id="header">
+    <div class="topbar__inner">
+      <a href="index.html" class="topbar__logo">Impresiones 3D</a>
+      <button class="topbar__burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="topbar__nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="projects.html">Servicios</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Presupuesto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Solicitar presupuesto</h1>
+        <p>Cuéntanos tu proyecto, adjunta un enlace a tu archivo 3D (.stl, .obj) o descríbenos qué necesitas. Te respondemos en 24–48 horas con un presupuesto sin compromiso.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-info">
+          <h2>Dónde estamos</h2>
+          <ul class="contact-details">
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:info@impresiones3d.com">info@impresiones3d.com</a>
+            </li>
+            <li>
+              <strong>Teléfono</strong>
+              <a href="tel:+59829127654">+598 2912 7654</a>
+            </li>
+            <li>
+              <strong>Dirección</strong>
+              <span>Av. de las Industrias 4567, Zona Franca, 12900 Montevideo</span>
+            </li>
+          </ul>
+          <div class="map-placeholder" aria-hidden="true">Mapa</div>
+        </div>
+        <div class="contact-form">
+          <h2>Describe tu proyecto</h2>
+          <form id="contactForm" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Nombre o empresa</label>
+              <input type="text" id="name" name="name" required placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="message">Proyecto (describe la pieza, uso, cantidad, o pega enlace a archivo .stl / .obj)</label>
+              <textarea id="message" name="message" required placeholder="Ej: Necesito 10 piezas de este soporte en PETG, archivo: [enlace] o adjunto por email..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--light">Solicitar presupuesto</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-cta">
+    <div class="pie-cta__inner">
+      <div class="pie-cta__texto">
+        <p class="pie-cta__nombre">Impresiones 3D</p>
+        <p>Av. de las Industrias 4567, Zona Franca · 12900 Montevideo</p>
+        <p><a href="mailto:info@impresiones3d.com">info@impresiones3d.com</a> · <a href="tel:+59829127654">+598 2912 7654</a></p>
+      </div>
+      <div class="pie-cta__accion">
+        <a href="contact.html" class="pie-cta__btn">Solicitar presupuesto</a>
+      </div>
+    </div>
+    <p class="pie-cta__copy">© 2025 Impresiones 3D</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

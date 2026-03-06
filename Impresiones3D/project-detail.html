@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detalle del servicio de impresión 3D.">
+  <title>Proyecto | Impresiones 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar" id="header">
+    <div class="topbar__inner">
+      <a href="index.html" class="topbar__logo">Impresiones 3D</a>
+      <button class="topbar__burger" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="topbar__nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="projects.html">Servicios</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Presupuesto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="project-detail">
+    <section class="hero" id="projectHero">
+      <div class="hero__image">
+        <img id="projectHeroImage" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80" alt="">
+      </div>
+      <div class="hero__content container">
+        <a href="projects.html" class="back-link">← Volver a servicios</a>
+        <h1 id="projectTitle">Carga del proyecto…</h1>
+        <p class="project-meta" id="projectMeta">—</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="project-gallery" id="projectGallery"></div>
+        <div class="project-description" id="projectDescription"></div>
+        <p class="text-center mb-0">
+          <a href="projects.html" class="btn-cta">Ver servicios</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-cta">
+    <div class="pie-cta__inner">
+      <div class="pie-cta__texto">
+        <p class="pie-cta__nombre">Impresiones 3D</p>
+        <p>Av. de las Industrias 4567, Zona Franca · 12900 Montevideo</p>
+        <p><a href="mailto:info@impresiones3d.com">info@impresiones3d.com</a> · <a href="tel:+59829127654">+598 2912 7654</a></p>
+      </div>
+      <div class="pie-cta__accion">
+        <a href="contact.html" class="pie-cta__btn">Solicitar presupuesto</a>
+      </div>
+    </div>
+    <p class="pie-cta__copy">© 2025 Impresiones 3D</p>
+  </footer>
+
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function() {
+      if (!window.PROJECTS_DATA) return;
+      var params = new URLSearchParams(window.location.search);
+      var id = parseInt(params.get('id'), 10) || 1;
+      var project = window.PROJECTS_DATA[id];
+      if (!project) project = window.PROJECTS_DATA[1];
+      var heroImg = document.getElementById('projectHeroImage');
+      var title = document.getElementById('projectTitle');
+      var meta = document.getElementById('projectMeta');
+      var gallery = document.getElementById('projectGallery');
+      var description = document.getElementById('projectDescription');
+      if (heroImg) heroImg.src = project.heroImage;
+      if (heroImg) heroImg.alt = project.name;
+      if (title) title.textContent = project.name;
+      if (meta) meta.textContent = project.location + ' · ' + project.year;
+      if (gallery && project.gallery && project.gallery.length) {
+        gallery.innerHTML = project.gallery.map(function(url) {
+          return '<img src="' + url + '" alt="' + project.name + '">';
+        }).join('');
+      }
+      if (description) {
+        description.innerHTML = '<h2>El servicio</h2><p>' + project.description + '</p>' +
+          (project.description2 ? '<p>' + project.description2 + '</p>' : '');
+      }
+      document.title = project.name + ' | Impresiones 3D';
+    })();
+  </script>
+</body>
+</html>

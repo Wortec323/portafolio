@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cafetería de especialidad. Café de origen, brunch, repostería artesanal y un espacio para conectar.">
+  <title>Café & Té | Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">Café & Té</a>
+      <button class="site-header__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="menu.html">La Carta</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="banner-split">
+      <div class="banner-split__img">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&q=80" alt="Interior de cafetería">
+      </div>
+      <div class="banner-split__text">
+        <h1>Donde el café tiene historia</h1>
+        <p>Café de especialidad, repostería recién hecha y un rincón para desconectar. Granos de origen único y un equipo que te recibe con nombre.</p>
+        <a href="#especialidades" class="banner-split__cta">Ver especialidades</a>
+      </div>
+    </section>
+
+    <section class="bloque-horario">
+      <div class="bloque-horario__inner">
+        <p class="bloque-horario__titulo">Abiertos</p>
+        <p class="bloque-horario__valores">Lunes a viernes 8:00 – 20:00 · Sábados y domingos 9:00 – 18:00</p>
+      </div>
+    </section>
+
+    <section class="especialidades" id="especialidades">
+      <div class="especialidades__inner">
+        <h2>Nuestras especialidades</h2>
+        <div class="especialidades__grid">
+          <a href="item-detail.html?id=1" class="especialidad especialidad--grande">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=80" alt="Café de especialidad">
+            <span class="especialidad__etiqueta">Café de especialidad</span>
+          </a>
+          <a href="item-detail.html?id=2" class="especialidad">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80" alt="Brunch">
+            <span class="especialidad__etiqueta">Brunch</span>
+          </a>
+          <a href="item-detail.html?id=3" class="especialidad">
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80" alt="Repostería">
+            <span class="especialidad__etiqueta">Repostería</span>
+          </a>
+        </div>
+        <div class="especialidades__botones">
+          <a href="contact.html" class="boton boton--primario">Reservar mesa</a>
+          <a href="menu.html" class="boton boton--secundario">Ver la carta</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__col">
+          <h4>Horario</h4>
+          <p>Lunes a viernes 8:00 – 20:00</p>
+          <p>Sábados y domingos 9:00 – 18:00</p>
+        </div>
+        <div class="site-footer__col">
+          <h4>Dónde estamos</h4>
+          <p>Bvar. España 1234</p>
+          <p>11300 Montevideo</p>
+          <p><a href="mailto:hola@cafeyte.com">hola@cafeyte.com</a></p>
+          <p><a href="tel:+59829001234">+598 2900 1234</a></p>
+        </div>
+        <div class="site-footer__col">
+          <h4>Enlaces</h4>
+          <p><a href="index.html">Inicio</a></p>
+          <p><a href="menu.html">La Carta</a></p>
+          <p><a href="about.html">Nosotros</a></p>
+          <p><a href="contact.html">Reservar</a></p>
+        </div>
+      </div>
+      <p class="site-footer__copy">© 2025 Café & Té</p>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

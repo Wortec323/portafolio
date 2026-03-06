@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserva tu mesa en Café & Té. Eventos y ubicación.">
+  <title>Reservar | Café & Té</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">Café & Té</a>
+      <button class="site-header__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="nav">
+        <a href="index.html">Inicio</a>
+        <a href="menu.html">La Carta</a>
+        <a href="about.html">Nosotros</a>
+        <a href="contact.html">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Reservar mesa</h1>
+        <p>Reserva para desayuno, comida o merienda. Para grupos grandes o eventos privados, escríbenos y te proponemos opciones.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <h2>Horario</h2>
+          <ul class="contact-details">
+            <li><strong>Lunes a viernes</strong> 8:00 – 20:00</li>
+            <li><strong>Sábados y domingos</strong> 9:00 – 18:00</li>
+          </ul>
+          <h2>Dónde estamos</h2>
+          <ul class="contact-details">
+            <li>
+              <strong>Dirección</strong>
+              <span>Bvar. España 1234, 11300 Montevideo</span>
+            </li>
+            <li>
+              <strong>Teléfono</strong>
+              <a href="tel:+59829001234">+598 2900 1234</a>
+            </li>
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:hola@cafeyte.com">hola@cafeyte.com</a>
+            </li>
+          </ul>
+          <div class="map-placeholder" aria-hidden="true">Mapa</div>
+        </div>
+        <div class="contact-form">
+          <h2>Pide tu reserva</h2>
+          <form id="contactForm" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+              </div>
+              <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+598 99 000 000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Fecha</label>
+                <input type="date" id="date" name="date" required>
+              </div>
+              <div class="form-group">
+                <label for="time">Hora</label>
+                <input type="time" id="time" name="time" required>
+              </div>
+              <div class="form-group">
+                <label for="guests">Personas</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" value="2" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Comentarios (opcional)</label>
+              <textarea id="message" name="message" placeholder="Alergias, celebración, mesa en terraza..."></textarea>
+            </div>
+            <button type="submit" class="boton boton--primario">Enviar reserva</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__col">
+        <h4>Horario</h4>
+        <p>Lunes a viernes 8:00 – 20:00</p>
+        <p>Sábados y domingos 9:00 – 18:00</p>
+      </div>
+      <div class="site-footer__col">
+        <h4>Dónde estamos</h4>
+        <p>Bvar. España 1234, 11300 Montevideo</p>
+        <p><a href="mailto:hola@cafeyte.com">hola@cafeyte.com</a></p>
+        <p><a href="tel:+59829001234">+598 2900 1234</a></p>
+      </div>
+      <div class="site-footer__col">
+        <h4>Enlaces</h4>
+        <p><a href="index.html">Inicio</a></p>
+        <p><a href="menu.html">La Carta</a></p>
+        <p><a href="about.html">Nosotros</a></p>
+        <p><a href="contact.html">Reservar</a></p>
+      </div>
+    </div>
+    <p class="site-footer__copy">© 2025 Café & Té</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
