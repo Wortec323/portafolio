@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio de Richard Marino — Propuestas web y proyectos de diseño.">
-  <title>Portafolio de Richard Marino</title>
+  <meta name="description" content="Conceptos de diseño web por Richard Marino — Plantillas web adaptables y profesionales para tu negocio.">
+  <title>Conceptos de diseño web | Richard Marino — Desarrollador web freelance</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/portafolio-home.css">
 </head>
 <body>
@@ -15,76 +15,207 @@
 
   <header class="home-header">
     <div class="home-header__inner">
-      <span class="home-header__logo">RM</span>
-      <a href="https://www.linkedin.com/in/richard-marino323/" class="home-header__linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-        </svg>
-        LinkedIn
-      </a>
+      <span class="home-header__logo">Richard Marino</span>
+      <nav class="home-header__nav">
+        <div class="home-lang" role="group" aria-label="Idioma / Language">
+          <button type="button" class="home-lang__btn is-active" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="home-lang__btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a href="https://www.linkedin.com/in/richard-marino323/" class="home-header__linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <span data-i18n="header.linkedin">LinkedIn</span>
+        </a>
+      </nav>
     </div>
   </header>
 
   <main class="home-main">
     <section class="home-hero">
-      <h1 class="home-hero__title">Portafolio de <span class="home-hero__name">Richard Marino</span></h1>
-      <p class="home-hero__intro">
-        Hola, soy Richard. Diseño y desarrollo propuestas web con estilos y animaciones que destacan: desde sitios minimalistas hasta identidades neón, brutalistas o inspiradas en los 80s. Cada proyecto explora una estética distinta para mostrar distintas formas de contar una marca o un producto.
+      <h1 class="home-hero__title" data-i18n="hero.title">Conceptos de diseño web</h1>
+      <p class="home-hero__subtitle" data-i18n="hero.subtitle">Plantillas web adaptables para distintos tipos de negocio</p>
+      <p class="home-hero__intro" data-i18n="hero.intro">
+        Cada diseño es un punto de partida: colores, textos, imágenes y estructura se pueden personalizar según tu marca y objetivos. Elegí un estilo que te guste y lo adaptamos a tu empresa.
       </p>
-      <a href="#propuestas" class="home-hero__cta">Ver propuestas</a>
+      <a href="#concepts" class="home-hero__cta" data-i18n="hero.cta">Ver conceptos de diseño</a>
     </section>
 
-    <section class="home-propuestas" id="propuestas">
-      <h2 class="home-propuestas__title">10 propuestas web</h2>
-      <p class="home-propuestas__lead">Elegí un estilo y explorá la demo. Cada carpeta es una web completa con su propia identidad.</p>
-      <div class="home-grid">
-        <a href="Impresiones3D/" class="home-card" data-theme="dark">
-          <span class="home-card__label">Impresiones 3D</span>
-          <span class="home-card__desc">Oscuro · Plus Jakarta · Azul · Bento</span>
-        </a>
-        <a href="Papeleria/" class="home-card" data-theme="warm">
-          <span class="home-card__label">Papel Central</span>
-          <span class="home-card__desc">Editorial · Libre Baskerville · Beige</span>
-        </a>
-        <a href="Arquitectura/" class="home-card" data-theme="light">
-          <span class="home-card__label">Estudio Arquitectura</span>
-          <span class="home-card__desc">Minimal · Playfair · Claro</span>
-        </a>
-        <a href="Cafeteria/" class="home-card" data-theme="warm">
-          <span class="home-card__label">Café & Té</span>
-          <span class="home-card__desc">Cálido · Fredoka · Terracota</span>
-        </a>
-        <a href="Neon/" class="home-card" data-theme="neon">
-          <span class="home-card__label">NEXUS Studio</span>
-          <span class="home-card__desc">Neón · Glitch · Rosa y cyan</span>
-        </a>
-        <a href="Brutalist/" class="home-card" data-theme="brutal">
-          <span class="home-card__label">BRUTAL</span>
-          <span class="home-card__desc">Brutalista · Negro y blanco · Tipografía</span>
-        </a>
-        <a href="Glassmorphism/" class="home-card" data-theme="glass">
-          <span class="home-card__label">Flow</span>
-          <span class="home-card__desc">Glassmorphism · Blur · Gradientes</span>
-        </a>
-        <a href="Retro80s/" class="home-card" data-theme="retro">
-          <span class="home-card__label">ARCADE NIGHT</span>
-          <span class="home-card__desc">Retro 80s · Scanlines · Magenta y cyan</span>
-        </a>
-        <a href="Organic/" class="home-card" data-theme="organic">
-          <span class="home-card__label">Verde Vivo</span>
-          <span class="home-card__desc">Orgánico · Blobs · Verde y tierra</span>
-        </a>
-        <a href="Japones/" class="home-card" data-theme="zen">
-          <span class="home-card__label">Casa del Té</span>
-          <span class="home-card__desc">Japonés · Wabi-sabi · Blanco y rojo</span>
-        </a>
+    <section class="home-intro">
+      <div class="home-intro__inner">
+        <p class="home-intro__text" data-i18n="intro.text">
+          A continuación hay varios estilos de diseño que pueden usarse como punto de partida para una web profesional. Cualquier diseño puede adaptarse a la identidad, el contenido y la estructura de tu empresa.
+        </p>
       </div>
+    </section>
+
+    <section class="home-concepts" id="concepts">
+      <h2 class="home-concepts__title" data-i18n="concepts.title">Conceptos de diseño</h2>
+      <div class="home-cards">
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card1.title">Concepto 1 — Oscuro y profesional</h3>
+            <p class="home-card__desc" data-i18n="card1.desc">Tema oscuro con acentos azules, ideal para tecnología y servicios B2B.</p>
+            <ul class="home-card__tags" data-i18n-tags="card1"></ul>
+            <a href="Impresiones3D/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card2.title">Concepto 2 — Editorial y clásico</h3>
+            <p class="home-card__desc" data-i18n="card2.desc">Estética cálida y editorial con tipografía serif para retail y papel.</p>
+            <ul class="home-card__tags" data-i18n-tags="card2"></ul>
+            <a href="Papeleria/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card3.title">Concepto 3 — Corporativo moderno</h3>
+            <p class="home-card__desc" data-i18n="card3.desc">Diseño claro y minimal con tipografía elegante para estudios y portfolios.</p>
+            <ul class="home-card__tags" data-i18n-tags="card3"></ul>
+            <a href="Arquitectura/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card4.title">Concepto 4 — Cálido y acogedor</h3>
+            <p class="home-card__desc" data-i18n="card4.desc">Estilo amigable con terracota y colores suaves para hostelería.</p>
+            <ul class="home-card__tags" data-i18n-tags="card4"></ul>
+            <a href="Cafeteria/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card5.title">Concepto 5 — Neón y atrevido</h3>
+            <p class="home-card__desc" data-i18n="card5.desc">Fondo oscuro con acentos neón y efectos glitch para agencias creativas.</p>
+            <ul class="home-card__tags" data-i18n-tags="card5"></ul>
+            <a href="Neon/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card6.title">Concepto 6 — Brutalista y tipográfico</h3>
+            <p class="home-card__desc" data-i18n="card6.desc">Negro y blanco, tipografía fuerte para una presencia de marca contundente.</p>
+            <ul class="home-card__tags" data-i18n-tags="card6"></ul>
+            <a href="Brutalist/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card7.title">Concepto 7 — Cristal y moderno</h3>
+            <p class="home-card__desc" data-i18n="card7.desc">Cards con efecto cristal y gradientes suaves para apps y productos SaaS.</p>
+            <ul class="home-card__tags" data-i18n-tags="card7"></ul>
+            <a href="Glassmorphism/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card8.title">Concepto 8 — Retro y divertido</h3>
+            <p class="home-card__desc" data-i18n="card8.desc">Gradientes y estilo ochentero para eventos y entretenimiento.</p>
+            <ul class="home-card__tags" data-i18n-tags="card8"></ul>
+            <a href="Retro80s/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card9.title">Concepto 9 — Natural y orgánico</h3>
+            <p class="home-card__desc" data-i18n="card9.desc">Verdes suaves y formas orgánicas para marcas de bienestar y eco.</p>
+            <ul class="home-card__tags" data-i18n-tags="card9"></ul>
+            <a href="Organic/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+
+        <article class="home-card">
+          <div class="home-card__preview">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=70" alt="" width="600" height="340" loading="lazy">
+          </div>
+          <div class="home-card__body">
+            <h3 class="home-card__title" data-i18n="card10.title">Concepto 10 — Minimal y zen</h3>
+            <p class="home-card__desc" data-i18n="card10.desc">Mucho espacio en blanco y un solo color de acento para marcas serenas.</p>
+            <ul class="home-card__tags" data-i18n-tags="card10"></ul>
+            <a href="Japones/" class="home-card__btn" data-i18n="btn.demo">Ver demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-process">
+      <h2 class="home-process__title" data-i18n="process.title">Cómo funciona el proceso</h2>
+      <ol class="home-process__list">
+        <li class="home-process__step">
+          <span class="home-process__num">1</span>
+          <h3 class="home-process__heading" data-i18n="process.step1.title">Elegí un estilo de diseño</h3>
+          <p class="home-process__text" data-i18n="process.step1.desc">Elegí uno de los conceptos de arriba (o combiná elementos) que mejor encaje con tu marca.</p>
+        </li>
+        <li class="home-process__step">
+          <span class="home-process__num">2</span>
+          <h3 class="home-process__heading" data-i18n="process.step2.title">Enviá el contenido de tu empresa</h3>
+          <p class="home-process__text" data-i18n="process.step2.desc">Compartí textos, imágenes, logo y las páginas que necesites.</p>
+        </li>
+        <li class="home-process__step">
+          <span class="home-process__num">3</span>
+          <h3 class="home-process__heading" data-i18n="process.step3.title">Personalización y desarrollo</h3>
+          <p class="home-process__text" data-i18n="process.step3.desc">Adapto el diseño a tu identidad y desarrollo el sitio.</p>
+        </li>
+        <li class="home-process__step">
+          <span class="home-process__num">4</span>
+          <h3 class="home-process__heading" data-i18n="process.step4.title">Lanzamiento de la web</h3>
+          <p class="home-process__text" data-i18n="process.step4.desc">Tu sitio se publica con alojamiento y configuración básica incluidos.</p>
+        </li>
+      </ol>
     </section>
   </main>
 
   <footer class="home-footer">
-    <p class="home-footer__copy">© 2025 Richard Marino · Portafolio web</p>
-    <p><a href="https://www.linkedin.com/in/richard-marino323/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+    <div class="home-footer__inner">
+      <p class="home-footer__dev" data-i18n="footer.dev">Desarrollado por Richard Marino</p>
+      <p class="home-footer__links">
+        <a href="https://github.com/Wortec323/portafolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="home-footer__sep">·</span>
+        <a href="https://www.linkedin.com/in/richard-marino323/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+      <p class="home-footer__year">© <span id="year">2025</span></p>
+    </div>
   </footer>
+
+  <script src="js/i18n.js"></script>
+  <script>
+    (function(){var y=new Date().getFullYear();var el=document.getElementById('year');if(el)el.textContent=y;})();
+  </script>
 </body>
 </html>
